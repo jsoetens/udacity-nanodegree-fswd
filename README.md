@@ -29,4 +29,6 @@ My project work for the [Full Stack Web Developer Nanodegree by Udacity](https:/
 * [How to Use Git and GitHub](https://www.udacity.com/courses/ud775)
 * [Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123)
 * [Javascript Basics](https://www.udacity.com/course/javascript-basics--ud804)
+* [Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [Shell Workshop](https://www.udacity.com/course/shell-workshop--ud206)
+* [Networking for Web Developers](https://www.udacity.com/course/networking-for-web-developers--ud256)
