@@ -31,7 +31,7 @@ img, embed, object, video {
 body, html {
     /* Fonts */
     /* https://fonts.google.com/specimen/Roboto?selection.family=Roboto */
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: rgb(45, 60, 73);
 }
@@ -163,8 +163,7 @@ hr {
 
 /* Footer */
 footer {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin: 1.25rem 0 1.25rem 0;
     justify-content: center;
 }
 
