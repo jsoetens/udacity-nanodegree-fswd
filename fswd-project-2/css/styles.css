@@ -1,0 +1,179 @@
+/* Responsive Web Design */
+* {
+    /* border-box - includes content, padding and border */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* prevent accidentally overflowing the viewport */
+img, embed, object, video {
+    max-width: 100%;
+}
+
+/* nice tap targets */
+.nav a, button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+
+/*  colors from mockup design
+    =========================
+    mockup blue => #02b3e4 => rgb(2, 179, 228)
+    black => #2d3c49 => rgb(45, 60, 73)
+    grey => #7d97ad => rgb(125, 151, 173)
+*/
+
+
+/* Common Stuff */
+body, html {
+    /* Fonts */
+    /* https://fonts.google.com/specimen/Roboto?selection.family=Roboto */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: rgb(45, 60, 73);
+}
+
+a {
+    color: rgb(45, 60, 73);
+    text-decoration: none;
+}
+
+
+/*  Flexbox
+    =======
+    display: flex;
+    flex-direction: row, row-reverse, column, column-reverse
+    flex-wrap: nowrap, wrap, wrap-reverse
+    flex-flow: <flex-direction> <flex-wrap>
+    justify-content: flex-start, flex-end, center, space-between, space-around
+    align-items (items aligned within container): flex-start, flex-end, center, baseline, stretch
+    align-self: flex-start, flex-end, center, baseline, stretch
+    align-content (spacing between lines): flex-start, flex-end, center, space-between, space-around, stretch
+    order: (... -1, 0 is default, +1 ...)
+*/
+.container {
+    max-width: 992px;
+    /* auto is used to center, the browser selects a suitable margin to use */
+    margin: 0 auto;
+}
+
+.flex-container-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-container-column {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.col-3 {
+    width: 25%
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/* Header */
+.site-logo {
+    margin: 0.5rem 0 0 0.5rem;
+    width: 60px;
+    height: 60px;
+}
+
+.site-title {
+    margin: 0 0.5rem 0 0;
+    font-weight: 100;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.site-subtitle {
+    margin: 0 0.5rem 0 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+
+/* Horizontal Rule */
+hr {
+    margin: 1.1rem 0 1.1rem 0;
+    border-top: 3px solid rgb(125, 151, 173);
+}
+
+
+/* Main */
+/* Hero Image */
+.hero {
+    margin: 0;
+    /* already has max-width 100% from our catchall */
+}
+
+/* Section */
+/* Featured Work */
+.featured-work {
+    margin: 1.25rem 0.5rem 0.75rem 0;
+    font-weight: 300;
+    font-size: 1.75rem;
+    color: rgb(125, 151, 173)
+}
+
+/* Article */
+.project-articles {
+    justify-content: space-between;
+    text-align: center;
+}
+
+.project-article {
+    margin: 0 0 1.25rem 0;
+}
+
+.project-figure {
+    margin: 0 auto;
+}
+
+.project-img {
+    width: 300px;
+    height: 200px;
+}
+
+.project-title {
+    margin: 0.75rem 0 0.25rem 0;
+    text-transform: uppercase;
+}
+
+.project-github-link {
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    justify-content: center;
+}
+
+.footer-text {
+    margin: 0 0 0 0;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+.footer-link {
+    font-style: italic;
+}

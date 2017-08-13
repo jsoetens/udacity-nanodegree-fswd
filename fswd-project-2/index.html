@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Support old IE browsers, needs to be asap in head element -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the viewport, support iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SEO: https://moz.com/beginners-guide-to-seo -->
+    <meta name="description" content="This portfolio of Johan Soetens shows completed projects in Full Stack Web Developer Nanodegree">
+    <meta name="author" content="Johan Soetens">
+    <!-- TODO: add favicon -->
+    <title>Portfolio - Johan Soetens</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <!-- CSS my styles -->
+    <!-- TODO: minify my styles -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="flex-container-row">
+            <div class="col-3">
+                <img class="site-logo" src="img/logo-udacity.svg" alt="Logo Udacity">
+            </div>
+            <div class="col-9 flex-container-column">
+                <h1 class="site-title">Johan Soetens</h1>
+                <h3 class="site-subtitle">Full Stack Web Developer</h3>
+            </div>
+        </header>
+        <hr>
+        <!-- IE11 and below: add an aria role of “main” to ensure it is accessible -->
+        <!-- https://developer.mozilla.org/en/docs/Web/HTML/Element/main#Browser_compatibility -->
+        <main role="main">
+            <div class="flex-container-row col-12">
+                <figure class="hero">
+                    <img src="img/man-in-the-woods-1113x640.jpg" alt="Hero image">
+                </figure>
+            </div>
+            <section>
+                <header class="flex-container-row col-12">
+                    <h2 class="featured-work">Featured Work</h2>
+                </header>
+                <div class="flex-container-row col-12 project-articles">
+                    <article class="project-article">
+                        <figure class="project-figure">
+                            <img class="project-img" src="img/project-logs-analysis-608x401.jpg" alt="Logs Analysis">
+                        </figure>
+                        <header>
+                            <h3 class="project-title">Logs Analysis</h3>
+                        </header>
+                        <!-- when using target, consider adding rel="noopener noreferrer" to avoid exploitation of the window.opener API. -->
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Attributes -->
+                        <a class="project-github-link" href="https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-3" target="_blank" rel="noopener noreferrer">Check the Github Repository</a>
+                    </article>
+                    <article class="project-article">
+                         <figure class="project-figure">
+                            <img class="project-img" src="img/project-build-a-portfolio-site-676x606.jpg" alt="Build a Portfolio Site">
+                        </figure>
+                        <header>
+                            <h3 class="project-title">Build a Portfolio Site</h3>
+                        </header>
+                        <a class="project-github-link" href="https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-2" target="_blank" rel="noopener noreferrer">Check the Github Repository</a>
+                    </article>
+                    <article class="project-article">
+                        <figure class="project-figure">
+                            <img class="project-img" src="img/project-movie-trailer-website-776x415.jpg" alt="Movie Trailer Website">
+                        </figure>
+                        <header>
+                            <h3 class="project-title">Movie Trailer Website</h3>
+                        </header>
+                        <a class="project-github-link" href="https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-1" target="_blank" rel="noopener noreferrer">Check the Github Repository</a>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="flex-container-row">
+            <p class="footer-text">Copyright © 2017 Johan Soetens - Project work for <a class="footer-link" href="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004" target="_blank" rel="noopener noreferrer">Udacity Full Stack Web Developer Nanodegree</a></p>
+        </footer>
+    </div>
+</body>
+</html>
