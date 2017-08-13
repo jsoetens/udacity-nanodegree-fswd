@@ -3,8 +3,8 @@ My project work for the [Full Stack Web Developer Nanodegree by Udacity](https:/
 
 ## Projects
 
-* Movie Trailer Website
-* Build a Portfolio Site
+* [Movie Trailer Website](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-1)
+* [Build a Portfolio Site](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-2)
 * Logs Analysis
 * Item Catalog
 * Neighborhood Map
@@ -32,3 +32,4 @@ My project work for the [Full Stack Web Developer Nanodegree by Udacity](https:/
 * [Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)
 * [Shell Workshop](https://www.udacity.com/course/shell-workshop--ud206)
 * [Networking for Web Developers](https://www.udacity.com/course/networking-for-web-developers--ud256)
+* [HTTP & Web Servers](https://www.udacity.com/course/http-web-servers--ud303)
