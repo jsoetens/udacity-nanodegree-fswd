@@ -8,7 +8,10 @@
 }
 
 /* prevent accidentally overflowing the viewport */
-img, embed, object, video {
+img,
+embed,
+object,
+video {
     max-width: 100%;
 }
 
@@ -28,7 +31,8 @@ img, embed, object, video {
 
 
 /* Common Stuff */
-body, html {
+body,
+html {
     /* Fonts */
     /* https://fonts.google.com/specimen/Roboto?selection.family=Roboto */
     font-family: "Roboto", sans-serif;
