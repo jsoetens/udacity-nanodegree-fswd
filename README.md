@@ -5,7 +5,7 @@ My project work for the [Full Stack Web Developer Nanodegree by Udacity](https:/
 
 * [Movie Trailer Website](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-1)
 * [Build a Portfolio Site](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-2)
-* Logs Analysis
+* [Logs Analysis](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-3)
 * Item Catalog
 * Neighborhood Map
 * Linux Server Configuration
