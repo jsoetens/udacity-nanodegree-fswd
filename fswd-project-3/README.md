@@ -8,9 +8,10 @@ This project makes use of a Linux-based VM, you'll need [Vagrant](https://www.va
 The database setup and data can be found in [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
 
 ## Getting Started
-Copy **newsdata.sql** and **logs_analysis.py** to the vagrant folder of your Vagrant VM.
+Copy **logs_analysis.py** and **newsdata.sql** to the vagrant folder of your Vagrant VM.
 
 ```Shell
+cp ~/logs_analysis.py ~/fullstack-nanodegree-vm/vagrant
 cp ~/newsdata.sql ~/fullstack-nanodegree-vm/vagrant
 ```
 
@@ -36,7 +37,7 @@ The database in **newsdata.sql** includes three tables:
 * The log table includes one entry for each time a user has accessed the site.
 
 ## Create Views
-Connect to the **news** database with **psql** and create these views **v_log_articles** and **v_log_errors**.
+Connect to the **news** database with **psql** and create views **v_log_articles** and **v_log_errors**.
 
 ```Shell
 psql -d news
