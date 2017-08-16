@@ -1,14 +1,14 @@
 # FSWD Project 3 - Logs Analysis
 
 ## Goal of the Project
-Build an internal reporting tool in Python that will use information from the PostgreSQL database to discover what kind of articles the site's readers like.
+Build an internal reporting tool in Python that will use information from a PostgreSQL database to discover what kind of articles the site's readers like.
 
 ## Prerequisites
 This project makes use of a Linux-based VM, you'll need [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org). Fork or clone the repository to get the [VM configuration](https://github.com/udacity/fullstack-nanodegree-vm).
-The database setup in [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+The database setup and data can be found in [newsdata.sql](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
 
 ## Getting Started
-Copy newsdata.sql to the vagrant folder of your Vagrant VM.
+Copy **newsdata.sql** and **logs_analysis.py** to the vagrant folder of your Vagrant VM.
 
 ```Shell
 cp ~/newsdata.sql ~/fullstack-nanodegree-vm/vagrant
@@ -29,15 +29,14 @@ cd /vagrant
 psql -d news -f newsdata.sql
 ```
 
-## The News database
-The database includes three tables:
+## The News Database
+The database in **newsdata.sql** includes three tables:
 * The authors table includes information about the authors of articles.
 * The articles table includes the articles themselves.
 * The log table includes one entry for each time a user has accessed the site.
 
 ## Create Views
-
-Connect to news database with psql and create these views.
+Connect to the **news** database with **psql** and create these views **v_log_articles** and **v_log_errors**.
 
 ```Shell
 psql -d news
@@ -67,7 +66,8 @@ select date(time) as log_date,
 			case
 				when status = '404 NOT FOUND' then 1
 				else 0
-			end) /
+			end)
+		/
 		sum(sum(
 			case
 				when status = '200 OK'
@@ -79,10 +79,11 @@ from log
 group by log_date;
 ```
 
-## Questions
-1. What are the most popular three articles of all time?
-2. Who are the most popular article authors of all time?
-3. On which days did more than 1% of requests lead to errors?
+## Run the Python Script
+```Shell
+cd /vagrant
+python3 logs_analysis.py
+```
 
 ## Example Output
 ```Shell
