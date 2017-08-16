@@ -23,7 +23,7 @@ class LogAnalyzer(object):
     def get_popular_articles(self, limit):
         """
         What are the most popular three articles of all time?
-        Example: "Princess Shellfish Marries Prince Handsome" — 1201 views
+        Example: "Princess Shellfish Marries Prince Handsome" - 1201 views
         Requires view v_log_articles.
         """
         query = """
@@ -41,7 +41,7 @@ class LogAnalyzer(object):
     def get_popular_authors(self):
         """
         Who are the most popular article authors of all time?
-        Example: Ursula La Multa — 2304 views
+        Example: Ursula La Multa - 2304 views
         Requires view v_log_articles.
         """
         query = """
@@ -58,7 +58,7 @@ class LogAnalyzer(object):
     def get_days_with_errors(self, percentage):
         """
         On which days did more than 1% of requests lead to errors?
-        Example: July 29, 2016 — 2.5% errors
+        Example: July 29, 2016 - 2.5% errors
         Requires view v_log_errors.
         """
         query = """
