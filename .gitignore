@@ -3,4 +3,7 @@
 
 # IDE
 .idea
+
+# Python
+*.py[cod]   # Will match .pyc, .pyo and .pyd files.
 __pycache__
