@@ -46,5 +46,17 @@ The [WSGIDaemonProcess](http://modwsgi.readthedocs.io/en/develop/configuration-d
 ### Access the Web Application
 Open [this url](http://ec2-35-177-58-142.eu-west-2.compute.amazonaws.com) in your favorite browser.
 
+## Interesting Links
+* [About SSH](https://help.github.com/articles/about-ssh)
+* [How To Configure SSH Key-Based Authentication on a Linux Server](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+* [How To Install the Apache Web Server on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04)
+* [How To Set Up Apache Virtual Hosts on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-16-04)
+* [Website File Permissions on a Linux web server](https://serverfault.com/questions/357108/what-permissions-should-my-website-files-folders-have-on-a-linux-webserver)
+* [Deploying Flask using Apache and mod_wsgi](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
+* [Installing mod_wsgi](http://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html)
+* [How to Install PostgreSQL on Ubuntu 16.04](https://www.linode.com/docs/databases/postgresql/how-to-install-postgresql-on-ubuntu-16-04)
+* [Upgrading to Python 3.6 on Ubuntu 16.4](https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get)
+* [Using Python Virtual Environments with mod_wsgi](http://modwsgi.readthedocs.io/en/develop/user-guides/virtual-environments.html)
+
 ## Where can I learn more?
 Follow the awesome [Udacity Full Stack Web Developer Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004)!
