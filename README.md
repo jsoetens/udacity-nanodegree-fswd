@@ -7,7 +7,7 @@ My project work for the [Full Stack Web Developer Nanodegree by Udacity](https:/
 * [Build a Portfolio Site](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-2)
 * [Logs Analysis](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-3)
 * [Item Catalog](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-4)
-* Neighborhood Map
+* [Neighborhood Map](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-5)
 * [Linux Server Configuration](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-6)
 
 ## Supporting Courses
