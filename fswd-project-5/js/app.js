@@ -79,6 +79,19 @@ var Store = function(data) {
         title: self.title()  // The marker's title will appear as a tooltip.
     });
 
+    // Animate a Marker
+    // https://developers.google.com/maps/documentation/javascript/markers#animate
+    this.animateMarker = function() {
+        if (self.googleMapsMarker.getAnimation() !== null) {
+            self.googleMapsMarker.setAnimation(null);
+        } else {
+            self.googleMapsMarker.setAnimation(google.maps.Animation.BOUNCE);
+            setTimeout(function() {
+                self.googleMapsMarker.setAnimation(null);
+            }, 1400);
+        }
+    };
+
     // Create a Google Maps Info Window.
     // https://developers.google.com/maps/documentation/javascript/infowindows
     // https://developers.google.com/maps/documentation/javascript/reference#InfoWindow
@@ -105,15 +118,16 @@ var Store = function(data) {
         return self.currentWeather();
     });
 
-    // Open the Info Window on clicking the marker (also gives the position).
+    // Clicking the marker opens the Info Window and adds animation.
     // Position is defined from the marker and opening this one will also close
     // the other info windows.
     self.googleMapsMarker.addListener('click', function() {
+        self.animateMarker();
         googleMapsInfowindow.setContent(self.contentString());
         googleMapsInfowindow.open(googleMapsMap, this);
     });
 
-    // Show the Info Window on clicking a link in the sidebar.
+    // Show the Info Window on clicking a marker.
     this.openInfoWindow = function(storeLocation) {
         google.maps.event.trigger(self.googleMapsMarker, 'click');
     };
@@ -128,19 +142,10 @@ var Store = function(data) {
         this.setIcon(googleMapsDefaultIcon);
     });
 
-    // Selecting a store opens the Info Window and adds marker animation.
-    // https://developers.google.com/maps/documentation/javascript/markers#animate
+    // Selecting a store toggles the click event which opens the Info Window
+    // and adds marker animation.
     this.toggleStoreLocation = function() {
-        // Marker Animation.
-        if (self.googleMapsMarker.getAnimation() !== null) {
-            self.googleMapsMarker.setAnimation(null);
-        } else {
-            google.maps.event.trigger(self.googleMapsMarker, 'click');
-            self.googleMapsMarker.setAnimation(google.maps.Animation.BOUNCE);
-            setTimeout(function() {
-                self.googleMapsMarker.setAnimation(null);
-            }, 1400);
-        }
+        google.maps.event.trigger(self.googleMapsMarker, 'click');
     };
 
 };
