@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Nagasto Maps shows the Lidl stores in Luxembourg.">
+    <meta name="author" content="Johan Soetens">
+    <title>Nagasto Maps</title>
+    <!-- CSS - Bootstrap 4 Beta 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- CSS - Nagasto Maps -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Full width container, spanning the entire width of the viewport. -->
+    <!-- https://getbootstrap.com/docs/4.0/utilities/sizing/ -->
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Extra small <576px => col (stacked) -->
+            <!-- Small >=576px <768px => col-sm-3/9 -->
+            <!-- Medium >=768px <992px => col-md-3/9 -->
+            <!-- Large >=992px <1200px => col-lg-2/10 -->
+            <!-- Extra large >=1200px => col-xl-2/10 -->
+            <div id="sidebar" class="col-sm-3 col-md-3 col-lg-2 col-sidebar">
+                <nav id="navigation" class="navbar navbar-dark bg-dark">
+                    <!-- Hamburger Menu -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSidebarContent" aria-controls="navbarSidebarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSidebarContent">
+                        <!-- Search field -->
+                        <form class="form-inline search-field">
+                            <!-- http://knockoutjs.com/documentation/textinput-binding.html -->
+                            <input class="form-control w-100" type="text" placeholder="Find your Store" aria-label="Search" data-bind="textInput: searchFieldText">
+                        </form>
+                        <!-- List of Stores -->
+                        <ul class="list-group list-stores" data-bind="foreach: filteredStores">
+                            <!-- http://knockoutjs.com/documentation/click-binding.html -->
+                            <li class="list-group-item list-group-item-action list-group-item-light" data-bind="text: title, click: toggleStoreLocation"></li>
+                        </ul>
+                    </div>  <!-- navbarSidebarContent -->
+                </nav>  <!-- navigation -->
+            </div>  <!-- col-sidebar -->
+            <!-- Google Maps Area -->
+            <div id="map" class="col-sm-9 col-md-9 col-lg-10 h-100 col-map">
+            </div>  <!-- map -->
+        </div>  <!-- row -->
+    </div>  <!-- container-fluid -->
+    <!-- JS - jQuery from Google Hosted Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- JS - Bootstrap 4 Beta 3 -->
+    <!-- Bootstrap uses jQuery’s slim build, but also supports the full version. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <!-- JS Knockout  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <!-- <script src="js/lib/knockout-3.4.2.js"></script> -->
+    <!-- JS - Nagasto Maps - JS -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Authenticate this app to the Google Maps JavaScript API using own API key -->
+    <!-- https://www.w3schools.com/jsref/event_onerror.asp -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8hGFiBTaARIrbWpkbwzlL8riBBoZ6sBg&callback=nagastoMaps" onerror="errorLoadingGoogleMaps()">
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+html,
+body {
+    /* Google Fonts - Roboto */
+    /* https://fonts.google.com/specimen/Roboto?selection.family=Roboto */
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;  /* Google Maps also uses 11px */
+    /* Google Maps - Fullscreen */
+    height: 100%;
+}
+
+
+/* Sidebar */
+.col-sidebar {
+    background-color: rgb(33, 33, 33);  /* #212121 */
+    color: rgb(225, 255, 255);  /* #FFFFFF */
+    margin: 0;
+    padding: 0;
+}
+
+.search-field {
+    margin-top: 0.5rem;
+}
+
+.list-stores {
+    margin-top: 0.25rem;
+}
+
+
+/* Google Maps Area */
+.col-map {
+    margin: 0;
+    padding: 0;
+}
