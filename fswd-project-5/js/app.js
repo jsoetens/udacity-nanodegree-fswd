@@ -142,7 +142,7 @@ var Store = function(data) {
         }
     };
 
-}
+};
 
 
 // ViewModel
@@ -206,7 +206,7 @@ function NagastoMapsViewModel() {
         if (searchFieldText || searchFieldText === '') {
             return ko.utils.arrayFilter(self.storeLocationsList(), function(storeLocation) {
                 var lowerTitle = storeLocation.title().toLowerCase();
-                var filterStatus = lowerTitle.includes(searchFieldText)
+                var filterStatus = lowerTitle.includes(searchFieldText);
                 console.log('filterStatus: ' + filterStatus);
                 if (!filterStatus) {
                     console.log('looks like filterStatus is ' + filterStatus);
@@ -232,7 +232,6 @@ function nagastoMaps() {
     // of the document.
     ko.applyBindings(new NagastoMapsViewModel());
 }
-
 
 // If the Google Maps API doesn’t load, there's a visible indication on the page.
 // https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror
