@@ -21,6 +21,7 @@ My project work for the [Full Stack Web Developer Nanodegree by Udacity](https:/
 * [Designing RESTful APIs](https://www.udacity.com/course/designing-restful-apis--ud388)
 * [Intro to AJAX](https://www.udacity.com/course/intro-to-ajax--ud110)
 * [JavaScript Design Patterns](https://www.udacity.com/course/javascript-design-patterns--ud989)
+* [Google Maps APIs](https://eu.udacity.com/course/google-maps-apis--ud864)
 * [Linux Command Line Basics](https://www.udacity.com/course/linux-command-line-basics--ud595)
 * [Configuring Linux Web Servers](https://www.udacity.com/course/configuring-linux-web-servers--ud299)
 
