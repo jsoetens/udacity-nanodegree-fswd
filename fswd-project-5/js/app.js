@@ -47,7 +47,7 @@ var Store = function(data) {
     // console.log('this.address: ' + this.address());
     this.country = ko.observable(data.country);
     // console.log('this.country: ' + this.country());
-    this.currentWeather = ko.observable('Unknown');
+    this.currentWeather = ko.observable('problems retrieving data.');
     // console.log('currentWeather: ' + self.currentWeather());
     this.contentString = ko.computed(function() {
         return '<div id="content"><strong>' + self.title() + '</strong>' +
@@ -100,8 +100,9 @@ var Store = function(data) {
     }).done(function(data) {
         return self.currentWeather();
     }).fail(function(error) {
-        console.log('Problems retrieving data from OpenWeatherMap.');
-        return 'Unknown';
+        self.currentWeather('problems retrieving data.');
+        console.log(self.currentWeather());
+        return self.currentWeather();
     });
 
     // Open the Info Window on clicking the marker (also gives the position).
@@ -200,19 +201,19 @@ function NagastoMapsViewModel() {
 
     this.filteredStores = ko.computed(function(storeLocation) {
         var searchFieldText = self.searchFieldText().toLowerCase();
-        console.log('this.searchFieldText: ' + self.searchFieldText());
+        // console.log('this.searchFieldText: ' + self.searchFieldText());
         // Check for searchFieldText being an empty string, the markers would
         // not be restored using for example backspace.
         if (searchFieldText || searchFieldText === '') {
             return ko.utils.arrayFilter(self.storeLocationsList(), function(storeLocation) {
                 var lowerTitle = storeLocation.title().toLowerCase();
                 var filterStatus = lowerTitle.includes(searchFieldText);
-                console.log('filterStatus: ' + filterStatus);
+                // console.log('filterStatus: ' + filterStatus);
                 if (!filterStatus) {
-                    console.log('looks like filterStatus is ' + filterStatus);
+                    // console.log('looks like filterStatus is ' + filterStatus);
                     storeLocation.googleMapsMarker.setMap(null);
                 } else {
-                    console.log('looks like filterStatus is ' + filterStatus);
+                    // console.log('looks like filterStatus is ' + filterStatus);
                     storeLocation.googleMapsMarker.setMap(googleMapsMap);
                 }
                 return filterStatus;
