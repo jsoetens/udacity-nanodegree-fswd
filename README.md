@@ -1,6 +1,8 @@
 # Full Stack Web Developer Nanodegree by Udacity
 My project work for the [Full Stack Web Developer Nanodegree by Udacity](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
 
+![Certificate Full Stack Web Developer Nanodegree](/fswd-nanodegree-certificate.png)
+
 ## Projects
 
 * [Movie Trailer Website](https://github.com/jsoetens/udacity-nanodegree-fswd/tree/master/fswd-project-1)
